@@ -8,10 +8,10 @@ nav {
     display: flex;
     width: 100%;
     height: 80px;
-    background: #020c50;
+    background: #0B1D51;
     justify-content: center;
     align-items: center;
-    gap: 23%;
+    gap: 20%;
 }
 
 .logo {
@@ -20,9 +20,18 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent;
+    flex-wrap: nowrap;
+    text-shadow: 2px 2px 20px #0be80b;
+
 }
 .logo > img {
     width: 80%;
+    cursor: pointer;
+    background: transparent;
+    box-shadow: 2px 2px 20px #e5e8e5;
+    box-shadow: inset 2px 2px 20px #e9ece9;
+    border-radius: 20px;
 }
 
 nav > ul {
@@ -35,8 +44,28 @@ nav > ul {
 
 nav > ul > li > a {
     text-decoration: none;
+    font-size: 20px;
+    font-family: 'Poppins';
     color: white;
-    font-weight: 600;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+}
+nav > ul > li > a::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(135deg, #fcfcfe 50%, #3d3a71 50%);
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+nav > ul > li > a:hover::after {
+    width: 100%;
 }
 
 .avatar {
@@ -51,6 +80,8 @@ nav > ul > li > a {
     width: 60%;
     border-radius: 50%;
     border: 2px solid #fff;
+    box-shadow: 1px 1px 40px 5px rgba(161, 158, 158, 0.75);
+    cursor: pointer;
 }
 .banner {
     width: 100%;
@@ -66,13 +97,121 @@ nav > ul > li > a {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px 0 0 0;
+    text-shadow: 2px 2px 30px #061d6b;
 }
 #about > h1 {
     color: #061d6b;
-    font-style: italic;
-    border-top: 1px solid #061d6b;
+    font-family: mv boli;
+    padding: 0 5px 0 0;
+    border-top: 2px solid #061d6b;
     border-bottom: 5px solid #061d6b;
-    border-left: 2px solid #061d6b;
+    border-left: 3px solid #061d6b;
     border-right: 5px solid #061d6b;
     border-radius: 30px;
+}
+section {
+    width: 100%;
+    height: 86.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table {
+    width: 80%;
+    margin: 150px 0 0 0;
+    border: 2px solid #fff;
+    border-collapse: collapse;
+}
+tr {
+    background: #12121a;
+    color: #84849e;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 70px;
+}
+tr:hover {
+    background: #2c2a48;
+}
+th,
+td {
+    width: 50px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+th {
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background: #201f35;
+    border-bottom: 2px solid #3d3a71;
+
+}
+.first-box {
+    border-radius: 20% 0 0 0;
+    border: none;
+}
+.last-box {
+    border-radius: 0 20% 0 0;
+    border: none;
+}
+td {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1rem;
+    border-bottom: 2px solid #3d3a71;
+}
+.first-text {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 750;
+    border: none;
+}
+td > span.experience {
+    color: #6144f5;
+    font-size: 20px;
+    font-weight: 800;
+}
+td > div.cricle {
+    width: 7px;
+    height: 7px;
+    background: #0be80b;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+.age {
+    padding: 5px 5px 5px 5px;
+    border: 2px solid #9f4733;
+    border-radius: 30px;
+    color: #e55a3b;
+    background: #df826d4f;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+.skills {
+    border: none;
+}
+.skil {
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skil > div {
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    background: transparent;
+    margin: 0 5px 5px 0;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #6e6b80;
+    border: 1px solid #9088bb;
+}
+.skil > div:hover {
+    color: #c4b9f7;
+    background: #463d75;
+    border: 1px solid #d2cede;
 }
