@@ -3,37 +3,49 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+header {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
     
 nav {
     display: flex;
-    width: 100%;
-    height: 80px;
-    background: #0B1D51;
+    width: 60%;
+    height: 60px;
+    background: rgba(249, 249, 250, 0.2);
+    box-shadow: inset 1px 1px 80px #000748;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20%;
+    border: 2px solid rgba(0, 7, 72, 0.242);
+    border-radius: 40px;
+    gap: 10%;
 }
 
 .logo {
-    width: 100px;
-    height: 80px;
+    width: 70px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
-    flex-wrap: nowrap;
-    text-shadow: 2px 2px 20px #0be80b;
-
 }
 .logo > img {
-    width: 80%;
+    width: 60%;
     cursor: pointer;
     background: transparent;
     box-shadow: 2px 2px 20px #e5e8e5;
     box-shadow: inset 2px 2px 20px #e9ece9;
-    border-radius: 20px;
+    border-radius: 10px;
+    transition: 0.5s ease;
 }
-
+.logo > img:hover {
+    transform: scale(1.3);
+}
 nav > ul {
     display: flex;
     justify-content: center;
@@ -46,12 +58,16 @@ nav > ul > li > a {
     text-decoration: none;
     font-size: 20px;
     font-family: 'Poppins';
-    color: white;
+    color: #e9ece9;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s ease;
+}
+nav > ul > li > a:hover {
+    font-size: 25px;
+    margin: 0 0 10px 0;
 }
 nav > ul > li > a::after {
     content: '';
@@ -60,7 +76,7 @@ nav > ul > li > a::after {
     left: 0;
     width: 0;
     height: 5px;
-    background: linear-gradient(135deg, #fcfcfe 50%, #3d3a71 50%);
+    background: linear-gradient(135deg, #e9ece9 50%, #3d3a71 50%);
     border-radius: 20px;
     transition: 0.5s ease;
 }
@@ -69,27 +85,60 @@ nav > ul > li > a:hover::after {
 }
 
 .avatar {
-    width: 100px;
-    height: 80px;
+    width: 70px;
+    height: 60px;
     margin: 0 30px 0 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 .avatar > img {
     width: 60%;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 2px solid #e9ece9;
     box-shadow: 1px 1px 40px 5px rgba(161, 158, 158, 0.75);
     cursor: pointer;
+    transition: 0.5s ease;
+}
+.avatar > img:hover{
+    transform: scale(1.3);
+}
+.avatar > a {
+    color: #e9ece9;
+    font-family: 'Poppins';
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: 0.5s ease;
+}
+.avatar > a:hover {
+    font-size: 25px;
+    margin: 0 0 10px 0;
+}
+.avatar > a::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(135deg, #e9ece9 50%, #3d3a71 50%);
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+.avatar > a:hover::after {
+    width: 100%;
 }
 .banner {
     width: 100%;
-    height: 86.5vh;
-    background: #000748;
+    height: 100vh;
+    background: #00053c;
+    display: flex;
 }
 .banner > img {
     width: 100%;
+    padding: 20px 0 0 0;  
 }
 #about {
     width: 100%;
@@ -101,27 +150,27 @@ nav > ul > li > a:hover::after {
     text-shadow: 2px 2px 30px #061d6b;
 }
 #about > h1 {
-    color: #061d6b;
+    color: #000748;
     font-family: mv boli;
     padding: 0 5px 0 0;
-    border-top: 2px solid #061d6b;
-    border-bottom: 5px solid #061d6b;
-    border-left: 3px solid #061d6b;
-    border-right: 5px solid #061d6b;
+    background: rgba(249, 249, 250, 0.5);
     border-radius: 30px;
+    box-shadow: 5px 5px 5px #000748;
 }
 section {
     width: 100%;
-    height: 86.5vh;
+    height: 150vh;
+    padding: 30px 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 table {
     width: 80%;
-    margin: 150px 0 0 0;
-    border: 2px solid #fff;
+    border: 2px solid transparent;
+    box-shadow: 1px 1px 16px #e9ece9;
     border-collapse: collapse;
+    border-radius: 30px 30px 0 0;
 }
 tr {
     background: #12121a;
@@ -148,11 +197,11 @@ th {
 
 }
 .first-box {
-    border-radius: 20% 0 0 0;
+    border-radius: 30% 0 0 0;
     border: none;
 }
 .last-box {
-    border-radius: 0 20% 0 0;
+    border-radius: 0 30% 0 0;
     border: none;
 }
 td {
@@ -214,4 +263,98 @@ td > div.cricle {
     color: #c4b9f7;
     background: #463d75;
     border: 1px solid #d2cede;
+}
+.card {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0 0 0;
+}
+.card > form {
+    width: 30%;
+    height: 70vh;
+    background: url('./images/logo.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(0, 7, 72, 0.242);
+    border-radius: 40px;
+}
+.card > form > div {
+    width: 100%;
+    padding: 30px 0 0 0;
+    height: 65vh;
+    border-radius: 35px;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 10px 10px 100px #000748;
+}
+.card > form > div > label {
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+    color: #e9ece9;
+    margin: auto 30px;
+}
+.card > form > div > input {
+    padding: 5px 10px 5px 30px;
+    display: flex;
+    margin: 10px auto;
+    font-size: 15px;
+    font-family: 'Poppins';
+    border: 2px solid #e9ece9;
+    border-radius: 5px;
+    box-shadow: 5px 5px 90px #000748;
+    text-shadow: 1px 1px 10px #000748;
+    color: #fff;
+    transition: 0.5s ease;
+}
+input::placeholder {
+    color: #e9ece9;
+}
+input#email {
+    background: url('./images/email.png') no-repeat;  
+}
+input#password {
+    background: url('./images/key.png') no-repeat;
+}
+.card > form > div > input:focus {
+    border: 2px solid #6a76e0b0;
+    outline: none;
+    transform: scale(1.1);
+}
+.card > form > div > button {
+    padding: 5px 30px 5px 30px;
+    display: flex;
+    margin: 25px auto;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 1px 1px 20px #000000;
+    font-family: 'Poppins';
+    color: #fff;
+    background: rgba(249, 249, 250, 0.1);
+    border: 2px solid rgba(0, 7, 72, 0.242);
+    border-radius: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.card > form > div > button:hover {
+    border: 2px solid rgba(0, 7, 72, 0.242);
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 20px #000748;
+    transform: scale(1.1);
+}
+.card > form > div > a {
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(63, 63, 64, 0.317);
+    text-shadow: 1px 1px 1px #000000;
+    margin: 0 0 0 30%;
+    transition: 0.5s ease;
+}
+.card > form > div > a:hover {
+    color: rgba(249, 249, 250, 0.2);
 }
