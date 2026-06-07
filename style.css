@@ -141,7 +141,7 @@ nav > ul > li > a:hover::after {
     width: 100%;
     height: 100vh;
     background: #e9ece9;
-    background-image: url(./images/banner.png);
+    background-image: url(./images/image.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -396,7 +396,7 @@ input#password {
     }
     
     .banner {
-        background-position: 70%;
+        background-image: url(./images/mobile-size-banner.jpg);
     }
 }
 @media (min-width: 786px) {
@@ -413,6 +413,9 @@ input#password {
     }
     .toggle-menu {
         display: none;
+    }
+    .banner {
+        background-image: url(./images/mobile-size-banner.jpg);
     }
     
 }
@@ -432,6 +435,6 @@ input#password {
         display: none;
     }
     .banner {
-        background-position: center;
+        background-image: url(./images/image.png);
     }
 }
